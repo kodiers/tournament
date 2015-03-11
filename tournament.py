@@ -13,14 +13,25 @@ def connect():
 
 def deleteMatches():
     """Remove all the match records from the database."""
+    connection = connect()
+    cursor = connection.cursor()
+    cursor.execute("DELETE * FROM Matches;")
 
 
 def deletePlayers():
     """Remove all the player records from the database."""
+    connection = connect()
+    cursor = connection.cursor()
+    cursor.execute("DELETE * FROM Players;")
 
 
 def countPlayers():
     """Returns the number of players currently registered."""
+    connection = connect()
+    cursor = connection.cursor()
+    cursor.execute("SELECT COUNT(*) FROM Players;")
+    count = int(cursor.fetchall())
+    return count
 
 
 def registerPlayer(name):
@@ -34,7 +45,7 @@ def registerPlayer(name):
     """
     connection = connect()
     cursor = connection.cursor()
-    cursor.execute("INSERT INTO Players (name, wins, loses, total_scores) VALUES (('%s'), 0, 0, 0)", (name,))
+    cursor.execute("INSERT INTO Players (name, wins, loses, total_scores) VALUES (('%s'), 0, 0, 0);", (name,))
 
 
 
