@@ -4,6 +4,7 @@
 #
 
 import psycopg2
+import math
 
 
 def connect():
@@ -15,22 +16,24 @@ def deleteMatches():
     """Remove all the match records from the database."""
     connection = connect()
     cursor = connection.cursor()
-    cursor.execute("DELETE * FROM Matches;")
+    cursor.execute("DELETE FROM matches;")
+    connection.commit()
 
 
 def deletePlayers():
     """Remove all the player records from the database."""
     connection = connect()
     cursor = connection.cursor()
-    cursor.execute("DELETE * FROM Players;")
+    cursor.execute("DELETE FROM players;")
+    connection.commit()
 
 
 def countPlayers():
     """Returns the number of players currently registered."""
     connection = connect()
     cursor = connection.cursor()
-    cursor.execute("SELECT COUNT(*) FROM Players;")
-    count = int(cursor.fetchall())
+    cursor.execute("SELECT COUNT('*') FROM players;")
+    count = int(cursor.fetchall()[0][0])
     return count
 
 
@@ -45,7 +48,9 @@ def registerPlayer(name):
     """
     connection = connect()
     cursor = connection.cursor()
-    cursor.execute("INSERT INTO Players (name, wins, loses, total_scores) VALUES (('%s'), 0, 0, 0);", (name,))
+    cursor.execute("INSERT INTO players (name) VALUES (%s);", (name,))
+    connection.commit()
+
 
 
 
@@ -62,6 +67,26 @@ def playerStandings():
         wins: the number of matches the player has won
         matches: the number of matches the player has played
     """
+    connection = connect()
+    cursor = connection.cursor()
+    num_players = countPlayers()
+    cursor.execute("SELECT id, name FROM players;")
+    players = cursor.fetchall()
+    rounds = math.log(num_players, 2)
+    matches = (rounds * num_players) / 2
+    i = 0
+    while i < matches:
+        p1 = players[i][0]
+        if i + 1 < len(players):
+            p2 = players[i + 1][0]
+        if p1 == p2:
+            p2 = players[0][0]
+        cursor.execute("INSERT INTO matches (player1, player2, wins) VALUES (%s, %s, NULL);", (p1, p2, ))
+        connection.commit()
+        i += 1
+    cursor.execute("SELECT players.id as id, name, COUNT (matches.wins) as wins, COUNT (matches.completed = TRUE ) as matches FROM players JOIN matches ON players.id = matches.player1 OR players.id = matches.player2 GROUP  BY players.id ORDER BY Wins;")
+    objects = cursor.fetchall()
+    return objects
 
 
 def reportMatch(winner, loser):
@@ -71,6 +96,10 @@ def reportMatch(winner, loser):
       winner:  the id number of the player who won
       loser:  the id number of the player who lost
     """
+    connection = connect()
+    cursor = connection.cursor()
+    cursor.execute("UPDATE matches SET wins = %s, completed = TRUE WHERE player1 = %s AND player2 = %s;", (winner, winner, loser))
+    connection.commit()
  
  
 def swissPairings():
@@ -88,5 +117,12 @@ def swissPairings():
         id2: the second player's unique id
         name2: the second player's name
     """
+    connection = connect()
+    cursor = connection.cursor()
+    cursor.execute("SELECT id1, players.name as name1, id2,  players.name as name2 FROM futurematches JOIN players ON id1 = players.id, id2 = players.id;")
+    objects = cursor.fetchall()
+    return objects
+
+
 
 

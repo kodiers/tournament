@@ -28,11 +28,21 @@
       <file leaf-file-name="tournament.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tournament.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73770493" vertical-offset="0" max-vertical-offset="1470">
-              <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.2175857" vertical-offset="1144" max-vertical-offset="2010">
+              <caret line="86" column="251" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="251" />
               <folding>
-                <marker date="1426036448000" expanded="true" signature="788:816" placeholder="SELECT COUNT..Players..." />
-                <marker date="1426036448000" expanded="true" signature="1261:1339" placeholder="INSERT INTO ..." />
+                <element signature="e#91#106#0" expanded="true" />
+                <marker date="1428076827000" expanded="true" signature="424:443" placeholder="DELETE FROM ..." />
+                <marker date="1428076827000" expanded="true" signature="633:652" placeholder="DELETE FROM ..." />
+                <marker date="1428076827000" expanded="true" signature="844:874" placeholder="SELECT COUNT..Players..." />
+                <marker date="1428076827000" expanded="true" signature="1325:1363" placeholder="INSERT INTO ..." />
+                <marker date="1428076827000" expanded="true" signature="2079:2107" placeholder="SELECT id, n..players..." />
+                <marker date="1428076827000" expanded="true" signature="2426:2492" placeholder="INSERT INTO ..." />
+                <marker date="1428076827000" expanded="true" signature="2571:2801" placeholder="SELECT playe..players..." />
+                <marker date="1428076827000" expanded="true" signature="3157:3240" placeholder="UPDATE Match..." />
+                <marker date="1428076827000" expanded="true" signature="3163:3240" placeholder="INSERT INTO ..." />
+                <marker date="1428076827000" expanded="true" signature="4005:4012" placeholder="SELECT playe..Players..." />
+                <marker date="1428076827000" expanded="true" signature="4005:4137" placeholder="SELECT id1, ..futurematches..." />
               </folding>
             </state>
           </provider>
@@ -41,8 +51,8 @@
       <file leaf-file-name="tournament.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tournament.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.4" vertical-offset="0" max-vertical-offset="315">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="20" />
+            <state vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="315">
+              <caret line="15" column="160" selection-start-line="15" selection-start-column="160" selection-end-line="15" selection-end-column="160" />
               <folding />
             </state>
           </provider>
@@ -51,8 +61,8 @@
       <file leaf-file-name="tournament_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tournament_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1144" max-vertical-offset="2175">
+              <caret line="113" column="25" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -211,9 +221,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -235,6 +242,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
@@ -280,20 +290,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Tournament" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -312,6 +308,20 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Tournament" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
       <method />
     </configuration>
     <list size="0" />
@@ -336,20 +346,20 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25679544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26037195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -369,87 +379,156 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tournament.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1470">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1426036448000" expanded="true" signature="788:816" placeholder="SELECT COUNT..Players..." />
-            <marker date="1426036448000" expanded="true" signature="1261:1339" placeholder="INSERT INTO ..." />
+            <element signature="e#91#106#0" expanded="true" />
+            <marker date="1428076827000" expanded="true" signature="424:443" placeholder="DELETE FROM ..." />
+            <marker date="1428076827000" expanded="true" signature="633:652" placeholder="DELETE FROM ..." />
+            <marker date="1428076827000" expanded="true" signature="844:874" placeholder="SELECT COUNT..Players..." />
+            <marker date="1428076827000" expanded="true" signature="1325:1363" placeholder="INSERT INTO ..." />
+            <marker date="1428076827000" expanded="true" signature="2079:2107" placeholder="SELECT id, n..players..." />
+            <marker date="1428076827000" expanded="true" signature="2426:2492" placeholder="INSERT INTO ..." />
+            <marker date="1428076827000" expanded="true" signature="2571:2801" placeholder="SELECT playe..players..." />
+            <marker date="1428076827000" expanded="true" signature="3157:3240" placeholder="UPDATE Match..." />
+            <marker date="1428076827000" expanded="true" signature="3163:3240" placeholder="INSERT INTO ..." />
+            <marker date="1428076827000" expanded="true" signature="4005:4012" placeholder="SELECT playe..Players..." />
+            <marker date="1428076827000" expanded="true" signature="4005:4137" placeholder="SELECT id1, ..futurematches..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tournament.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tournament_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tournament.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1426036448000" expanded="true" signature="788:816" placeholder="SELECT COUNT..Players..." />
-            <marker date="1426036448000" expanded="true" signature="1261:1339" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tournament.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tournament_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tournament_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tournament.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.4" vertical-offset="0" max-vertical-offset="315">
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="315">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tournament_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tournament.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73770493" vertical-offset="0" max-vertical-offset="1470">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1426036448000" expanded="true" signature="788:816" placeholder="SELECT COUNT..Players..." />
-            <marker date="1426036448000" expanded="true" signature="1261:1339" placeholder="INSERT INTO ..." />
+            <element signature="e#91#106#0" expanded="true" />
+            <marker date="1428076827000" expanded="true" signature="424:443" placeholder="DELETE FROM ..." />
+            <marker date="1428076827000" expanded="true" signature="633:652" placeholder="DELETE FROM ..." />
+            <marker date="1428076827000" expanded="true" signature="844:874" placeholder="SELECT COUNT..Players..." />
+            <marker date="1428076827000" expanded="true" signature="1325:1363" placeholder="INSERT INTO ..." />
+            <marker date="1428076827000" expanded="true" signature="2079:2107" placeholder="SELECT id, n..players..." />
+            <marker date="1428076827000" expanded="true" signature="2426:2492" placeholder="INSERT INTO ..." />
+            <marker date="1428076827000" expanded="true" signature="2571:2801" placeholder="SELECT playe..players..." />
+            <marker date="1428076827000" expanded="true" signature="3157:3240" placeholder="UPDATE Match..." />
+            <marker date="1428076827000" expanded="true" signature="3163:3240" placeholder="INSERT INTO ..." />
+            <marker date="1428076827000" expanded="true" signature="4005:4012" placeholder="SELECT playe..Players..." />
+            <marker date="1428076827000" expanded="true" signature="4005:4137" placeholder="SELECT id1, ..futurematches..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#91#106#0" expanded="true" />
+            <marker date="1428076827000" expanded="true" signature="424:443" placeholder="DELETE FROM ..." />
+            <marker date="1428076827000" expanded="true" signature="633:652" placeholder="DELETE FROM ..." />
+            <marker date="1428076827000" expanded="true" signature="844:874" placeholder="SELECT COUNT..Players..." />
+            <marker date="1428076827000" expanded="true" signature="1325:1363" placeholder="INSERT INTO ..." />
+            <marker date="1428076827000" expanded="true" signature="2079:2107" placeholder="SELECT id, n..players..." />
+            <marker date="1428076827000" expanded="true" signature="2426:2492" placeholder="INSERT INTO ..." />
+            <marker date="1428076827000" expanded="true" signature="2571:2801" placeholder="SELECT playe..players..." />
+            <marker date="1428076827000" expanded="true" signature="3157:3240" placeholder="UPDATE Match..." />
+            <marker date="1428076827000" expanded="true" signature="3163:3240" placeholder="INSERT INTO ..." />
+            <marker date="1428076827000" expanded="true" signature="4005:4012" placeholder="SELECT playe..Players..." />
+            <marker date="1428076827000" expanded="true" signature="4005:4137" placeholder="SELECT id1, ..futurematches..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="15" column="160" selection-start-line="15" selection-start-column="160" selection-end-line="15" selection-end-column="160" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1144" max-vertical-offset="2175">
+          <caret line="113" column="25" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2175857" vertical-offset="1144" max-vertical-offset="2010">
+          <caret line="86" column="251" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="251" />
+          <folding>
+            <element signature="e#91#106#0" expanded="true" />
+            <marker date="1428076827000" expanded="true" signature="424:443" placeholder="DELETE FROM ..." />
+            <marker date="1428076827000" expanded="true" signature="633:652" placeholder="DELETE FROM ..." />
+            <marker date="1428076827000" expanded="true" signature="844:874" placeholder="SELECT COUNT..Players..." />
+            <marker date="1428076827000" expanded="true" signature="1325:1363" placeholder="INSERT INTO ..." />
+            <marker date="1428076827000" expanded="true" signature="2079:2107" placeholder="SELECT id, n..players..." />
+            <marker date="1428076827000" expanded="true" signature="2426:2492" placeholder="INSERT INTO ..." />
+            <marker date="1428076827000" expanded="true" signature="2571:2801" placeholder="SELECT playe..players..." />
+            <marker date="1428076827000" expanded="true" signature="3157:3240" placeholder="UPDATE Match..." />
+            <marker date="1428076827000" expanded="true" signature="3163:3240" placeholder="INSERT INTO ..." />
+            <marker date="1428076827000" expanded="true" signature="4005:4012" placeholder="SELECT playe..Players..." />
+            <marker date="1428076827000" expanded="true" signature="4005:4137" placeholder="SELECT id1, ..futurematches..." />
           </folding>
         </state>
       </provider>

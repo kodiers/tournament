@@ -7,9 +7,10 @@
 -- these lines here.
 
 -- Create table Players (store player's info)
-CREATE TABLE Players (id serial PRIMARY KEY , name text, wins NUMERIC, loses NUMERIC, total_scores NUMERIC);
+CREATE TABLE players (id serial PRIMARY KEY , name text);
 
 -- Create table Matches (store matches info)
-CREATE TABLE Matches (id serial PRIMARY KEY, player1 INTEGER REFERENCES Players(id), player2 INTEGER REFERENCES Players(id),
-    player1_score NUMERIC, player2_score NUMERIC);
+CREATE TABLE matches (id serial PRIMARY KEY, player1 INTEGER REFERENCES Players(id), player2 INTEGER REFERENCES Players(id), wins INTEGER REFERENCES Players(id) NULL, completed BOOL NULL );
 
+-- Create view
+CREATE VIEW futurematches AS SELECT player1 as id1, player2 as id2 FROM Players JOIN Matches ON Players.id = player1 AND Players.id = player2 WHERE wins = NULL;
