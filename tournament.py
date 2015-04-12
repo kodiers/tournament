@@ -18,6 +18,7 @@ def deleteMatches():
     cursor = connection.cursor()
     cursor.execute("DELETE FROM matches;")
     connection.commit()
+    connection.close()
 
 
 def deletePlayers():
@@ -26,6 +27,7 @@ def deletePlayers():
     cursor = connection.cursor()
     cursor.execute("DELETE FROM players;")
     connection.commit()
+    connection.close()
 
 
 def countPlayers():
@@ -34,6 +36,7 @@ def countPlayers():
     cursor = connection.cursor()
     cursor.execute("SELECT COUNT('*') FROM players;")
     count = int(cursor.fetchall()[0][0])
+    connection.close()
     return count
 
 
@@ -50,6 +53,7 @@ def registerPlayer(name):
     cursor = connection.cursor()
     cursor.execute("INSERT INTO players (name) VALUES (%s);", (name,))
     connection.commit()
+    connection.close()
 
 
 
@@ -69,23 +73,9 @@ def playerStandings():
     """
     connection = connect()
     cursor = connection.cursor()
-    num_players = countPlayers()
-    cursor.execute("SELECT id, name FROM players;")
-    players = cursor.fetchall()
-    rounds = math.log(num_players, 2)
-    matches = (rounds * num_players) / 2
-    i = 0
-    while i < matches:
-        p1 = players[i][0]
-        if i + 1 < len(players):
-            p2 = players[i + 1][0]
-        if p1 == p2:
-            p2 = players[0][0]
-        cursor.execute("INSERT INTO matches (player1, player2, wins) VALUES (%s, %s, NULL);", (p1, p2, ))
-        connection.commit()
-        i += 1
-    cursor.execute("SELECT players.id as id, name, COUNT (matches.wins) as wins, COUNT (matches.completed = TRUE ) as matches FROM players JOIN matches ON players.id = matches.player1 OR players.id = matches.player2 GROUP  BY players.id ORDER BY Wins;")
+    cursor.execute("SELECT id,name, wins, matches FROM standings ORDER BY wins DESC;")
     objects = cursor.fetchall()
+    connection.close()
     return objects
 
 
@@ -98,8 +88,10 @@ def reportMatch(winner, loser):
     """
     connection = connect()
     cursor = connection.cursor()
-    cursor.execute("UPDATE matches SET wins = %s, completed = TRUE WHERE player1 = %s AND player2 = %s;", (winner, winner, loser))
+    cursor.execute("INSERT INTO matches (player1, player2, player1_win) VALUES (%s, %s, TRUE)", (winner, loser, ))
+    cursor.execute("INSERT INTO matches (player1, player2, player1_win) VALUES (%s, %s, FALSE)", (loser, winner, ))
     connection.commit()
+    connection.close()
  
  
 def swissPairings():
@@ -119,9 +111,22 @@ def swissPairings():
     """
     connection = connect()
     cursor = connection.cursor()
-    cursor.execute("SELECT id1, players.name as name1, id2,  players.name as name2 FROM futurematches JOIN players ON id1 = players.id, id2 = players.id;")
+    cursor.execute("SELECT players.id, players.name, wins.number as wins FROM players, wins WHERE players.id = wins.id ORDER BY wins DESC;")
     objects = cursor.fetchall()
-    return objects
+    connection.close()
+    rounds = math.log(len(objects), 2)
+    matches = (rounds * len(objects)) / 2    # Calculate matches count
+    i = 0
+    swisspairings = []
+    # Create pairings for each match
+    while i < matches:
+        player1_id = objects[i][0]
+        player1_name = objects[i][1]
+        player2_id = objects[i + 1][0]
+        player2_name = objects[i + 1][1]
+        swisspairings.append((player1_id, player1_name, player2_id, player2_name))
+        i += 2
+    return swisspairings
 
 
 
