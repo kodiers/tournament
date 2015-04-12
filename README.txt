@@ -16,9 +16,10 @@ STEPS:
 2. Run terminal (Mac\Linux) or command prompt(Windows)
 3. Start psql command (for run database shell)
 3. In the database shell enter: "CREATE DATABASE tournament;"
-4. In the database shell enter commands from tournament.sql file or enter: "\i tournament.sql"
-5. Exit database shell
-6. Run tests by entering "python tournament_test.py" in shell.
-7. That's all :)
+4. In the database shell enter: "\c tournament" to connect to database.
+5. In the database shell enter commands from tournament.sql file or enter: "\i tournament.sql" to install database schema (tables, views)
+6. Exit database shell
+7. Run tests by entering "python tournament_test.py" in shell.
+8. That's all :)
 
 ####################################
